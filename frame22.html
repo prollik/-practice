@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Frame22</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<!--ШРИФТ-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+
+<!--Frame22-->
+<!--Хедер,див. Меню, иконки оповещения,пользавателя-->
+<header class="container-fluid d-flex my-auto header">
+    <div class="container flex-row meny my-auto ">
+        <nav class="navbar navbar-expand-lg navbar-light my-auto ">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Дашборд</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Клиенты</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Рекламные коспании</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Франшиза</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Журнал продаж</a>
+                </li>
+            </ul>
+        </nav>
+
+    </div>
+
+    <!--Форма, иконки оповещения, пользавателя-->
+    <form class="d-flex align-items-center">
+        <a class="btn m-auto">
+            <img class="" src="icons/звонок.png" alt="">
+        </a>
+
+        <a class="btn m-auto">
+            <img class="iWats" src="icons/Vector.png" alt="">
+        </a>
+    </form>
+</header>
+
+
+
+<!--Левый, правый сайдбар, центр.-->
+<section class="d-flex justify-content-between" >
+    <!--Левый сайдбар-->
+    <div class="container bg-secondary saidR p-0">
+        <a class="my-3 icons " href="#">
+            <img class="" src="icons/l1.png" alt="">
+        </a>
+        <a class="my-3 icons" href="#">
+            <img class="" src="icons/l2.png" alt="">
+        </a>
+        <a class="my-3 icons" href="#">
+            <img class="" src="icons/l3.png" alt="">
+        </a>
+    </div>
+
+
+
+    <!--Центр-->
+    <section class="container-fluid p-0">
+
+        <!--Центр, якоря-->
+        <div class="container-fluid mt-4 d-flex px-5">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb p-0 m-0 bg-white text-muted">
+                    <li class="breadcrumb-item"><a href="#" class="breadcrumb-item-href">Журнал продаж</a></li>
+                    <li class="breadcrumb-item"><a href="#" class="breadcrumb-item-href">Список дел</a></li>
+                </ol>
+            </nav>
+        </div>
+
+        <!--Центр. Строка поиска-->
+        <div class="container-fluid d-flex mt-5 px-5 inpD">
+            <input type="text" class="form-control" id="inpFr20">
+            <a href="#" id="imgInp20"><img src="icons/inp.png"></a>
+        </div>
+
+        <!--Центр, инпут Сортировка+Город-->
+        <div class="container-fluid mt-5 d-flex px-5">
+            <div id="idfilt23sorting" onclick="filt23Sort()"></div>
+            <div class="my-auto mr-3">Сортировка</div>
+            <!--инпут Сортировка-->
+            <div id="sort23" onclick="f11()">
+                <div id="imgSort"></div>
+
+                <p id="outSort"></p>
+
+                <div id="spisUlSort">
+                    <ul id="ulSort">
+                        <li class="liSort23"><label>Общие1</label></li>
+                        <li class="liSort23"><label>Общие2</label></li>
+                        <li class="liSort23"><label>Общие3</label></li>
+
+                    </ul>
+                </div>
+            </div>
+            <!--Город-->
+            <div id="filter" onclick="filt()"></div>
+            <div class="my-auto navA navA2">Город</div>
+
+            <div class="class1" id="y" onclick="f3()">
+                <div id="img"></div>
+                <p id="out"></p>
+
+                <div class="class2" id="spisUl">
+                    <ul id="ulSity">
+
+                        <li id="li1" class="checkbox">
+                            <div class="container d-flex">
+                                <input class="checkbox__input" type="checkbox" id="checkbox_1" value="Витебск">
+                                <label class="checkbox__label" for="checkbox_1">Витебск</label>
+                            </div>
+                        </li>
+
+                        <li id="li2" class="checkbox">
+                            <div class="container d-flex">
+                                <input class="checkbox__input" type="checkbox" id="checkbox_2" value="Минск">
+                                <label class="checkbox__label" for="checkbox_2">Минск</label>
+                            </div>
+                        </li>
+
+
+                        <li id="li3" class="checkbox">
+                            <div class="container d-flex">
+                                <input class="checkbox__input" type="checkbox" id="checkbox_3" value="Гродно">
+                                <label class="checkbox__label" for="checkbox_3">Гродно</label>
+                            </div>
+                        </li>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <!--Центр. Полоска-->
+        <div class="container-fluid mt-5 pl-5 pr-4 d-flex">
+            <span class="mr-2">Фильтр</span>
+            <div class="container-fluid linie border-top-0"></div>
+        </div>
+
+        <!--Центр, Дата-->
+        <div class="container-fluid mt-5 d-flex px-5">
+            <!--Центр, инпут Дата-->
+            <div class="d-flex">
+                <div class="my-auto navA">Срок</div>
+                <input class="form-control" type="text" name="datefilter" value="" id="iDate"/>
+            </div>
+
+        </div>
+
+        <!--Центр, Тип+Статус-->
+        <div class="container-fluid mt-5 d-flex px-5">
+
+            <!--Центр, Тип-->
+            <div id="filter1" onclick="filt1()"></div>
+            <div class="my-auto navA">Тип</div>
+            <!--Центр, инпут Тип-->
+            <div class="class3" id="y1" onclick="f4()">
+                <div id="img1"></div>
+
+                <p id="out1"></p>
+
+                <div class="class4" id="spisUlt">
+                    <ul id="ulTyp">
+                        <li class="aLi1"><label>1</label></li>
+                        <li class="aLi1"><label>2</label></li>
+                        <li class="aLi1"><label>3</label></li>
+                        <li class="aLi1"><label>4</label></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!--Центр, Статус-->
+            <div id="filter2" onclick="filt2()"></div>
+            <div class="my-auto navA navA4">Статус</div>
+            <!--Центр, инпут Статус-->
+            <div class="class5" id="y2" onclick="f5()">
+                <div id="img2"></div>
+
+                <p id="out2" aria-placeholder="ffff" ></p>
+
+                <div class="class6" id="spisUlst">
+                    <ul id="ulStat">
+                        <li class="aLi2"><label>1</label></li>
+                        <li class="aLi2"><label>2</label></li>
+                        <li class="aLi2"><label>3</label></li>
+                        <li class="aLi2"><label>4</label></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--</div>-->
+
+
+        <!--Центр. Каталог копаний-->
+        <div class="container-fluid mt-5 px-0 table-responsive">
+            <table class="table table-striped table-borderless">
+                <thead>
+                <tr>
+                    <th class="pl-5">Город</th>
+                    <th>Тип сделки</th>
+                    <th>Фио клиента</th>
+                    <th>Статус</th>
+                    <th>Ответсвенный</th>
+                    <th>Срок</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr>
+                    <td class="pl-5 align-middle" scope="row">Сочи</td>
+                    <td  class="align-middle">Первичная</td>
+                    <td  class="align-middle">Иванов И.И.</td>
+                    <td  class="align-middle">Активная</td>
+                    <td  class="align-middle">Рожков И.И.</td>
+                    <td  class="align-middle">06.19-09.19</td>
+                    <td class="align-middle">
+                        <a class="">
+                            <img class="" src="icons/md-close.png" alt="">
+                        </a>
+                    </td>
+                    <td class="align-middle float-right">
+                        <a class="" href="">
+                            <img class="" src="icons/glaz.png" alt="">
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="pl-5 align-middle" scope="row">Сочи</td>
+                    <td  class="align-middle">Первичная</td>
+                    <td  class="align-middle">Иванов И.И.</td>
+                    <td  class="align-middle">Активная</td>
+                    <td  class="align-middle">Рожков И.И.</td>
+                    <td  class="align-middle">06.19-09.19</td>
+
+                    <td class="align-middle">
+                        <a class="">
+                            <img class="" src="icons/md-close.png" alt="">
+                        </a>
+                    </td>
+
+                    <td class="align-middle float-right">
+                        <a class="" href="">
+                            <img class="" src="icons/glaz.png" alt="">
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="pl-5 align-middle" scope="row">Сочи</td>
+                    <td  class="align-middle">Первичная</td>
+                    <td  class="align-middle">Иванов И.И.</td>
+                    <td  class="align-middle">Активная</td>
+                    <td  class="align-middle">Рожков И.И.</td>
+                    <td  class="align-middle">06.19-09.19</td>
+
+                    <td class="align-middle">
+                        <a class="">
+                            <img class="" src="icons/md-close.png" alt="">
+                        </a>
+                    </td>
+
+                    <td class="align-middle float-right">
+                        <a class="" href="">
+                            <img class="" src="icons/glaz.png" alt="">
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="pl-5 align-middle" scope="row">Сочи</td>
+                    <td  class="align-middle">Первичная</td>
+                    <td  class="align-middle">Иванов И.И.</td>
+                    <td  class="align-middle">Активная</td>
+                    <td  class="align-middle">Рожков И.И.</td>
+                    <td  class="align-middle">06.19-09.19</td>
+
+                    <td class="align-middle">
+                        <a class="">
+                            <img class="" src="icons/md-close.png" alt="">
+                        </a>
+                    </td>
+
+                    <td class="align-middle float-right">
+                        <a class="" href="">
+                            <img class="" src="icons/glaz.png" alt="">
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="pl-5 align-middle" scope="row">Сочи</td>
+                    <td  class="align-middle">Первичная</td>
+                    <td  class="align-middle">Иванов И.И.</td>
+                    <td  class="align-middle">Активная</td>
+                    <td  class="align-middle">Рожков И.И.</td>
+                    <td  class="align-middle">06.19-09.19</td>
+
+                    <td class="align-middle">
+                        <a class="">
+                            <img class="" src="icons/md-close.png" alt="">
+                        </a>
+                    </td>
+
+                    <td class="align-middle float-right">
+                        <a class="" href="">
+                            <img class="" src="icons/glaz.png" alt="">
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="pl-5 align-middle" scope="row">Сочи</td>
+                    <td  class="align-middle">Первичная</td>
+                    <td  class="align-middle">Иванов И.И.</td>
+                    <td  class="align-middle">Активная</td>
+                    <td  class="align-middle">Рожков И.И.</td>
+                    <td  class="align-middle">06.19-09.19</td>
+
+                    <td class="align-middle">
+                        <a class="">
+                            <img class="" src="icons/md-close.png" alt="">
+                        </a>
+                    </td>
+
+                    <td class="align-middle float-right">
+                        <a class="" href="">
+                            <img class="" src="icons/glaz.png" alt="">
+                        </a>
+                    </td>
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+        <!--        Кнопка ДОБАВИТЬ НОВУЮ КОМПАНИЮ-->
+        <div class="container-fluid d-flex flex-row-reverse px-5 mt-5">
+            <button type="button" class="btn addFr20">Добавить компанию</button>
+        </div>
+
+    </section>
+
+
+    <!--Правый сайдбар-->
+    <section class="container bg-secondary p-0 saidR">
+        <a class="btn my-3 mx-auto icons">
+            <img class="" src="icons/tel.png" alt="">
+        </a>
+        <a class="btn my-3 icons" href="#">
+            <img class="" src="icons/r2.png" alt="">
+        </a>
+        <hr>
+        <a class="btn my-3 icons" href="#">
+            <img class="" src="icons/r3.png" alt="">
+        </a>
+        <a class="btn my-3 icons" href="#">
+            <img class="" src="icons/r4.png" alt="">
+        </a>
+        <hr>
+        <a class="btn my-2 icons" href="#">
+            <img class="" src="icons/r5.png" alt="">
+        </a>
+    </section>
+</section>
+
+<!--ФОН-->
+<div class="filt"></div>
+
+<!--Модальное окно. Frame22-->
+<section class="container align-middle align-items-center" id="window22">
+    <div class=" text container d-flex justify-content-between pt-3 my-3">
+        <b>Завершение сделки</b>
+        <button type="button" class="close" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+
+    <div class="row btn22d">
+        <button type="button" class="btn btn22">Удачно</button>
+        <button type="button" class="btn btn22">Неудачно</button>
+    </div>
+</section>
+
+<script type="text/javascript" src="1.js" defer></script>
+
+</body>
+</html>

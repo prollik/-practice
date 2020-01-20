@@ -1,0 +1,863 @@
+body {
+    font-family: 'Roboto', -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 24px;
+    line-height: 28px
+}
+
+a:hover {
+    text-decoration: none;
+    color: #ADADAD;;
+}
+
+a{
+    color: #ADADAD;;
+}
+
+hr{
+    border: 1px solid #949494;
+}
+
+th, label{
+    font-style: normal;
+    font-size: 24px;
+    line-height: 28px
+}
+
+span {
+    background-color: #ffffff;
+    position: relative;
+    z-index: 1;
+}
+
+td{
+    font-style: normal;
+    font-size: 24px;
+    line-height: 28px
+}
+
+/*Меню*/
+.header{
+    background-color: #C4C4C4;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: bold;
+    padding-bottom: 0.5%;
+    padding-top: 0.5%;
+}
+
+/*Иконки в левом и правом сайдбаре*/
+.icons{
+    display: block;
+    text-align: center;
+}
+
+/*Длина левого, правого сайдбара*/
+.saidR, .saidL{
+    width: 7%;
+}
+
+.meny{
+    margin-left: 6%;
+}
+
+/*FRAME20*/
+
+/*Якоря*/
+.breadcrumb-item+.breadcrumb-item::before {
+    display: inline-block;
+    padding-right: .5rem;
+    color: #ADADAD;
+    content: ">";
+}
+.breadcrumb{
+    background-color: white;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    color: #ADADAD;
+}
+.breadcrumb-item-href{
+    color: #ADADAD;
+}
+
+/*Поисковая строка */
+.inpD{
+    position: relative;
+}
+
+#inpFr20{
+    height: 55px;
+    position: relative;
+    border-radius:25px;
+    border-color: #C4C4C4;
+}
+
+#imgInp20{
+    position:absolute ;
+    right: 70px;
+    bottom: 10px;
+}
+ /*Подписи кнопок/инпутов */
+.navA, .page-link, .addFr20{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    text-decoration: none;
+    color:  black;
+}
+
+.navA{
+    margin-right: 2rem;
+    /*margin-left: 10%;*/
+}
+
+.navA2, .navA4{
+    margin-right: 2rem;
+    margin-left: 10%;
+}
+
+
+/*Инпут. ДАТА*/
+#iDate, #iDate2{
+    outline: none;
+    width: 270px;
+    height: 56px;
+    box-sizing: border-box;
+    border-radius: 83px;
+    border-color: #C4C4C4;
+}
+/*Значок в ДАТА*/
+#iDate {
+    background-image: url("icons/dat.png");
+    background-repeat: no-repeat;
+    background-position: 90%;
+}
+
+/*Полоска*/
+.linie{
+    width: 100%;
+    border: 1px solid #C4C4C4;;
+    margin: auto;
+}
+
+/*Фильтр закрывающий список ГОРОД, ТИП, СТАТУС*/
+#filter, #filter1, #filter2{
+    width: auto;
+    position: fixed;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index:2 ;
+    display: none;
+}
+/*Фильтр закрывающий список ГОРОДа*/
+#filter1{
+    /*border: 5px solid green;*/
+}
+/*Фильтр закрывающий список ТИПа*/
+#filter2{
+    /*border: 5px solid gold;*/
+}
+
+/*ГОРОД, ТИП, СТАТУС*/
+.class1, .class3, .class5 {
+    width: 250px;
+    height: 56px;
+    background-color: white;
+    border: 1px solid #C4C4C4;
+    border-radius: 83px;
+    z-index: 2;
+}
+
+.class1{
+    z-index: 3;
+}
+
+/*Открывающийся список. ГОРОД, ТИП, СТАТУС*/
+.class2, .class4, .class6 {
+    width: 250px;
+    background-color: white;
+    display:none;
+    margin-top: 0px;
+    border: 1px solid #C4C4C4;
+    border-radius:25px ;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    z-index: 2;
+}
+
+
+.class2{
+    background-color: white;
+    width: 250px;
+    display:none;
+    margin-top: 0;
+    border: 1px solid #C4C4C4;
+    border-radius:25px ;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    z-index: 2;
+}
+
+#ulSity, #ulTyp, #ulStat{
+    margin: 0;
+    padding-left: 1em;
+    list-style: none;
+}
+
+/*Чекбоксы. ГОРОД*/
+.checkbox {
+    font-family: Roboto;
+    position: relative;
+    font-size: 24px;
+    list-style: none;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 28px;
+}
+
+.checkbox__input {
+    margin-top: 20px;
+    -webkit-appearance: none;
+    appearance: none;
+    position: absolute;
+}
+
+/*Текст возле чекбокса. ГОРОД*/
+.checkbox__label {
+    margin-top: 3px;
+    padding-left: 15px;
+    /*margin-bottom: -10px;*/
+    color: #444;
+    cursor: pointer;
+}
+
+.checkbox__label:before {
+    content: "";
+    display: block;
+    width: 15.5px;
+    height: 15.5px;
+    border: 2px solid black;
+    background-color: white;
+    border-radius: 0;
+    margin-top: 8px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: background .1s linear, border .1s linear;
+}
+
+.checkbox__label:after {
+    content: "";
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: url("icons/chek.png") no-repeat;
+    background-size: 16px 16px;
+    opacity: 0;
+    position: absolute;
+    top: 8px;
+    left: 0;
+    z-index: 2;
+    transition: opacity .1s linear;
+}
+
+.checkbox__input:checked + .checkbox__label:before {
+    background-color: white;
+    border-color: white;
+    transform: scaleY(-1);
+}
+
+.checkbox__input:checked + .checkbox__label:after {
+    opacity: 1;
+}
+
+/*li скрытые в выпадающих списках*/
+.aLi {
+    margin-top: 20px;
+    color: black;
+}
+
+/*Строка вывода. Город, тип, статус*/
+#out, #out1, #out2{
+    /*border:1px solid red ;*/
+    margin-top: -38px;
+    margin-bottom: 5px;
+    margin-left: 20px;
+    width: 180px;
+    height: 50px;
+    padding-left: 33%;
+    padding-top: 5%;
+    z-index: 5;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#out{
+    padding-left: 0;
+    padding-top: 5%;
+
+}
+
+/*Стрелочка. Город, тип, статус*/
+#img, #img1, #img2{
+    content: '';
+    display: block;
+    width: 25px;
+    height: 25px;
+    margin-left: 210px;
+    margin-top: 15px;
+    background: url('icons/select.png') no-repeat;
+}
+
+/*Кнопка. ДОБАВИТЬ*/
+.addFr20{
+    outline: none;
+    display: block;
+
+    width: 249px;
+    height: 55px;
+    text-align: center;
+    top: 50%;
+    color: black;
+    background: #C4C4C4;
+    border-radius: 0;
+
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+}
+
+.addFr20{
+    outline: none;
+    display: block;
+    margin-right: 2px;
+    width: 587px;
+    height: 118px;
+    text-align: center;
+    top: 50%;
+    color: black;
+    background: #C4C4C4;
+    border-radius: 112px;
+}
+
+
+
+/*FRAME21*/
+.klient{
+    width: 55%;
+    padding-bottom: 3em;
+}
+.inf{
+    width: 45%;
+    padding-bottom: 3em;
+}
+
+/*Фото клиента*/
+#fotoImg{
+    position: absolute;
+    margin:auto;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+
+#foto{
+    width: 256px;
+    height: 256px;
+    background-color: #949494;
+    position: relative;
+}
+
+.sdelka{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+}
+
+/*Номер телефона*/
+#num{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+}
+
+/*Картинка отправки сообщения в инпуте*/
+#imgTeleg{
+    position:absolute ;
+    right: 30px;
+    bottom: 14px;
+}
+
+/*Строка отправки сообщения*/
+.poisk{
+    position: relative;
+    width: 75%;
+}
+
+#inpFr21{
+    height: 55px;
+    margin-top: 5%;
+    position: relative;
+    border-radius:25px;
+}
+
+#imgInp21 {
+    position: absolute;
+    right: 30px;
+    bottom: 14px;
+}
+
+/*Комментарии*/
+.comments{
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+}
+
+/*Комментарии, дата*/
+.data{
+    font-size: 18px;
+}
+
+.comT{
+    margin-left: 2%;
+}
+
+/*Кнопка. ДОБАВИТЬ*/
+.addFr21{
+    outline: none;
+    display: block;
+
+    width: 249px;
+    height: 55px;
+    text-align: center;
+    top: 50%;
+    color: black;
+    background: #C4C4C4;
+    border-radius: 0;
+
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+}
+
+/*Кнопка. ЗАВЕРШИТЬ*/
+.end21{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 42px;
+    text-decoration-line: underline;
+    color: #FF0000;
+}
+
+.end21:hover{
+    color: #FF0000;
+    text-decoration: none;
+}
+
+/*Фильтр fr22+fr23*/
+.filt{
+    width: auto;
+    position: fixed;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index:10 ;
+    background-color: #d9dde2;
+    opacity: 50%;
+}
+
+
+
+/*FRAME22*/
+
+#window22{
+    position: absolute;
+    max-width: 1029px;
+    height: 319px;
+    background-color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index:12;
+}
+
+
+.text{
+    font-size: 24px;
+}
+
+.btn22{
+    font-size: 36px;
+    width: 295px;
+    height: 79px;
+    background-color: #C4C4C4;
+    border-radius: 112px;
+    margin: auto;
+}
+
+.btn22d{
+    width: 800px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 5rem;
+}
+
+/*FRAME23*/
+.window23{
+    position: absolute;
+    max-width: 1098px;
+
+    background-color: white;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index:12;
+}
+
+
+
+/*Фильтр закрывающий список ГОРОД, КЛИНИКА,
+ВРЕМЯ, ТИП ПРИЕМА, ФИО, СОРТИРОВКА - (FRAME23)
+ПРИЧИНА, ГОРОД - (FRAME24)*/
+#idfilt23City, #idfilt23Hospit, #idfilt23Doc,
+#idfilt23Time, #idfilt23priem, #idfilt23FIO, #idfilt23sorting,
+#idfilt24Cause, #idfilt24City{
+    width: auto;
+    position: fixed;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index:2 ;
+    display: none;
+}
+
+
+/*ГОРОД, КЛИНИКА, ДОКТОР, ВРЕМЯ,
+ТИП ПРИЕМА, ФИО, СОРТИРОВКА - (FRAME23)*/
+#city23, #hospit23, #doc23, #time23, #priem23,
+#fio23, #sort23
+{
+    width: 352px;
+    height: 56px;
+    background-color: white;
+    border: 1px solid #C4C4C4;
+    border-radius: 83px;
+    z-index: 2;
+}
+
+.hospit23{
+    margin-left: 3em;
+}
+
+/*ДОКТОР, ФИО*/
+#doc23,
+#fio23 {
+    width: 507px;
+}
+
+/*ДАТА*/
+#datepicker{
+    width: 195px;
+    height: 56px;
+    border-radius: 83px;
+    border: 1px solid #C4C4C4;
+}
+
+::-webkit-calendar-picker-indicator {
+    font-size: 30px;
+
+    color: transparent;
+    opacity: 1;
+    background: url("icons/dat.png") no-repeat center;
+    background-size: contain;
+}
+
+
+#datepicker::-webkit-outer-spin-button,
+#datepicker::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+
+/*ВРЕМЯ*/
+#time23{
+    width: 169px;
+    height: 56px;
+    margin-left: 20px;
+    z-index: 4;
+}
+
+/*ТИП ПРИЕМА*/
+#priem23{
+    z-index: 3;
+}
+
+
+/*Открывающийся список (DIV). ГОРОД, КЛИНИКА, ДОКТОР,
+ВРЕМЯ, ФИО, СОРТИРОВКА, ПРИЧИНА - (FRAME23)
+ПРИЧИНА, ГОРОД - (FRAME24)*/
+#spisUlС, #spisUlH, #spisUlD,
+#spisUl23T, #spisUlP,#spisUlF,
+#spisUlSort,
+#spisUl__Cause, #spisUl24__Сity{
+    width: 352px;
+    background-color: white;
+    display:none;
+    margin-top: 0;
+    border: 1px solid #C4C4C4;
+    border-radius:25px ;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    z-index: 2;
+}
+
+/*Открывающийся список. ВРЕМЯ*/
+#spisUl23T {
+    width: 169px;
+    max-height: 200px;
+    overflow: hidden auto;
+}
+
+/*Открывающийся список (UL). ГОРОД, КЛИНИКА, ДОКТОР,
+ВРЕМЯ, ФИО, СОРТИРОВКА, ПРИЧИНА - (FRAME23)
+ПРИЧИНА, ГОРОД - (FRAME24)*/
+#ulCity, #ulHospit, #ulDoc,
+#ulTime, #ulPriem, #ulFIO,
+#ulSort,
+#ulCause, #ul24__City{
+    margin: 0;
+    padding-left: 1em;
+    list-style: none;
+}
+
+/*Строка вывода.
+ГОРОД, КЛИНИКА,
+ДОКТОР, ВРЕМЯ, ФИО, ПРИЕМ, СОРТИРОВКА - (FRAME23)
+ПРИЧИНА ГОРОД - (FRAME24)*/
+#out23City, #out23Hospit, #out23Doc,
+#out23Time, #out23Priem, #out23FIO,
+#outSort,
+#out24__Cause, #out24City{
+    margin-top: -38px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    width: 300px;
+    height: 50px;
+    padding-left: 5%;
+    padding-top: 3.3%;
+    z-index: 5;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+/*Строка вывода. ФИО*/
+#out23FIO{
+    padding-top: 2.5%;
+    padding-left: 3.2%
+}
+
+/*!Строка вывода.ВРЕМЯ*/
+#out23Time{
+    width: 100px;
+    padding-left: 6%;
+    padding-top: 7%;
+}
+
+
+/*Стрелочка.
+ГОРОД, КЛИНИКА,
+ДОКТОР, ВРЕМЯ, ФИО, ПРИЕМ, СОРТИРОВКА - (FRAME23)
+ПРИЧИНА ГОРОД - (FRAME24)*/
+#img23C, #img23H, #img23T, #img23P, #img23F,
+#imgSort,
+#img24__Cause, #img24__City{
+    content: '';
+    display: block;
+    width: 25px;
+    height: 25px;
+    margin-left: 300px;
+    margin-top: 15px;
+    background: url('icons/select.png') no-repeat;
+}
+
+/*СТРЕЛОЧКА ДАТА*/
+#img23T{
+    margin-left: 120px;
+    margin-top: 15px;
+}
+
+/*Стрелочка. ДОКТОР*/
+#img23D{
+    width: 25px;
+    height: 25px;
+    position:absolute ;
+    content: '';
+    display: block;
+    left: 580px;
+    margin-top: 15px;
+    background: url('icons/select.png') no-repeat;
+}
+
+#inp23D:focus ~ #img23D {transform: rotate(180deg);}
+
+/*Инпут, ДОКТОР*/
+#inp23D{
+    position: relative;
+    padding-left: 65px;
+    width: 507px;
+    height: 56px;
+    border-radius:25px;
+    border-color: #C4C4C4;
+}
+
+/*Лупа. ДОКТОР*/
+#imgInp{
+    position:absolute;
+    margin-left: 120px;
+    margin-top: 8px;
+}
+
+/*Стрелочка. ФИО*/
+#img23F{
+    margin-left: 462px;
+}
+
+/*Полоска*/
+.linie23{
+    width: 98%;
+    border: 1px solid #C4C4C4;;
+    margin: auto;
+}
+
+
+/*Форма. ЗАМЕТКА*/
+#exampleFormControlTextarea1{
+    border-radius: 30px;
+}
+
+/*Кнопка. ЗАВЕРШИТЬ*/
+.end{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    text-decoration: none;
+    color:  black;
+
+    outline: none;
+    display: block;
+    margin-right: 2px;
+    width: 277px;
+    height: 118px;
+    text-align: center;
+    top: 50%;
+    background: #C4C4C4;
+    border-radius: 112px;
+}
+
+
+/*FRAME24*/
+
+#window24{
+    position: absolute;
+    max-width: 1098px;
+    max-height: 584px;
+
+    background-color: white;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index:12;
+}
+
+#сause24, #city24 {
+    width: 292px;
+    height: 56px;
+    background-color: white;
+    border: 1px solid #C4C4C4;
+    border-radius: 83px;
+    z-index: 2;
+}
+#spisUl__Cause{
+    width: 292px;
+}
+
+#city24{
+    width: 242px;
+}
+
+#spisUl24__Сity{
+    width: 242px;
+}
+
+#out24__Cause{
+    padding-top:4%;
+    width: auto;
+}
+#out24City{
+    padding-top: 5%;
+}
+
+
+#img24__Cause, #img24__City{
+    margin-left: 250px;
+}
+
+#img24__City{
+    margin-left: 200px;
+}
+
+.end24{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    text-decoration: none;
+    color:  black;
+
+    outline: none;
+    display: block;
+    margin-right: 2px;
+    width: 295px;
+    height: 79.15px;
+    text-align: center;
+    top: 50%;
+    background: #C4C4C4;
+    border-radius: 112px;
+}
+
+
+
